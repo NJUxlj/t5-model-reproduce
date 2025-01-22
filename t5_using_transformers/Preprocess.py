@@ -163,6 +163,10 @@ def prepare_squad_dataset()->Dataset:
         remove_columns=dataset["train"].column_names,  
         desc="Processing dataset",  
     )  
+
+    processed_datasets['train'] = processed_datasets['train'].select(range(2000))
+    processed_datasets['validation'] = processed_datasets['validation'].select(range(1000))
+    # processed_datasets['test'] = processed_datasets['test'].select(range(1000))
     
     return processed_datasets
 

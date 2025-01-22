@@ -6,9 +6,9 @@ T5_MODEL_PATH = "/root/autodl-tmp/models/t5-small"
 SQUAD_PATH = "/root/autodl-tmp/t5-model-reproduce/data/squad"
 
 Config = {
-    "model_path": "output",
-	"input_max_length":120,
-	"output_max_length":30,
+    "output_dir": "output/t5-finetuned",
+	"input_max_length":512,
+	"output_max_length":512,
     "epoch": 3,
     "batch_size": 32,
     "optimizer": "adam",

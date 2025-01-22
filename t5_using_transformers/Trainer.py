@@ -17,11 +17,18 @@ from Preprocess import DataProcessor
 from Evaluation import compute_metrics
 
 
+import sys
+sys.path.append("../")
+from config.config import T5_MODEL_PATH, Config
+
+from Preprocess import prepare_squad_dataset
+
+
 
 
 
 def get_training_args(  
-    output_dir: str = "t5-finetuned",  
+    output_dir: str = Config['output_dir'],  
     num_train_epochs: int = 3,  
     per_device_train_batch_size: int = 8,  
     per_device_eval_batch_size: int = 8,  
@@ -59,15 +66,7 @@ def train():
     model, tokenizer = get_model_and_tokenizer()  
     
     # 2. 加载数据集（需要根据实际任务修改）  
-    dataset = load_dataset("your_dataset_name")  
-    
-    # 3. 数据预处理  
-    processor = DataProcessor(tokenizer)  
-    processed_datasets = dataset.map(  
-        processor.preprocess_function,  
-        batched=True,  
-        remove_columns=dataset["train"].column_names  
-    )  
+    processed_datasets = prepare_squad_dataset()
     
     # 4. 准备训练参数  
     training_args = get_training_args()  

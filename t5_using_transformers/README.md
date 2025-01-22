@@ -20,14 +20,19 @@ python Inference.py
 
 
 
-
+---
 
 ## SQUAD Preprocess Result:
 ![preprocess](image/preprocess.png)
 
 
+---
 
 
+## Training Snapshot
+![training](image/training.png)
+
+---
 
 
 ## Dataset that can be used to fine-tune T5
