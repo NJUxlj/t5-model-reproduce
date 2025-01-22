@@ -1,0 +1,1 @@
+The `t5` model in this folder is implemented using the transformers library from HuggingFace.
