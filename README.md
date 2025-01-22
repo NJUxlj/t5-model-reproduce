@@ -36,3 +36,42 @@ T5采用了标准的Encoder-Decoder Transformer架构，主要包含以下关键
 - ![image](https://github.com/user-attachments/assets/ed4c5e62-b6a5-43cf-aa97-c6fcbc3dc066)
 
 
+
+
+## About this project
+- `t5_using_pytorch` contains the code that we manually implement the T5 without using any advanced libraries.
+  - (not finished yet)
+- `t5_using_transformers` contains the code that we use the transformers library from the huggingface to implement the T5. 
+  - (this one is already finished)
+
+
+
+
+
+## How to Run
+### `t5_using_pytorch`
+```bash
+python main.py
+```
+
+### `t5_using_transformers`
+- for details of this version, you can refer to the `README.md` in the `t5_using_transformers` folder.
+```bash
+cd t5_using_transformers
+python Trainer.py
+python Inference.py
+```
+
+
+
+
+## Training Snapshot for the pytorch version
+
+
+
+
+
+## Results for the pytorch version
+
+
+

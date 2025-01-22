@@ -21,6 +21,8 @@ Config = {
     "beam_size":5
 }
 
+T5_CHECKPOINT = Config['output_dir']
+
 
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")

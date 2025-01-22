@@ -34,7 +34,33 @@ python Inference.py
 
 ---
 
+## Inference Snapshot
+```python
+if __name__ == '__main__':
+    # output = inference("User: who are you? Agent:")
 
+    # print("\n",output)
+
+    context = '''Architecturally, the school has a Catholic character. 
+            Atop the Main Building's gold dome is a golden statue of the Virgin Mary. 
+            Immediately in front of the Main Building and facing it, is a copper statue of Christ 
+            with arms upraised with the legend "Venite Ad Me Omnes". Next to the Main Building is
+            the Basilica of the Sacred Heart. Immediately behind the basilica is the Grotto, 
+            a Marian place of prayer and reflection.'''
+    question  = "To whom did the Virgin Mary allegedly appear in 1858 in Lourdes France?"
+    test_inputs = [  
+        f"Question:{question} Context:{context}",  
+    ]  
+
+    for test_input in test_inputs:  
+        output = inference(test_input)  
+        print(f"\nInput:\n {test_input}")  
+        print(f"Output:\n {output}")  
+
+```
+![inference](image/inference.png)
+
+---
 ## Dataset that can be used to fine-tune T5
 
 1. **文本摘要任务**：
